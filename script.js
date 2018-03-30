@@ -15,7 +15,7 @@ window.onload = function(){
         canvas.style.border = "1px solid";
         document.body.appendChild(canvas);
         ctx = canvas.getContext('2d');
-        snakee = new Snake([[6,4][5,4][4,4]]);
+        snakee = new Snake([[6,4],[5,4],[4,4]]);
         refreshCanvas();
 
     }
@@ -49,7 +49,7 @@ window.onload = function(){
         }
         this.advance = function(){
             var nextPosition = this.body[0].slice();
-            nexPosition[0] +=1;
+            nextPosition[0] +=1;
             this.body.unshift(nextPosition);
             this.body.pop();
         }
